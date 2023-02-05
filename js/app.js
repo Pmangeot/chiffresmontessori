@@ -92,7 +92,6 @@ function resultat (EventTarget){
         document.location.reload();
     } else {
         EventTarget.target.className = 'badAns'
-        alert('Rate essaye encore');
     }
 }
 
