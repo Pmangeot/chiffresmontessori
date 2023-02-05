@@ -14,8 +14,10 @@ const gameConfig = {
 
 function jeu(jetNumber) {
     const nbrans = 5;
-    let result = 0;
-    let total =0;
+    let result; 
+    result = 0;
+    let total;
+    total = 0 ;
     for(var i = 0; i<jetNumber; i++){
     const jet = document.createElement("div");
     jet.className = 'dice';
@@ -86,9 +88,11 @@ ansSelection.forEach(element => {
 function resultat (EventTarget){
     console.log(EventTarget);
     if (EventTarget.target.id === 'winner'){
-        alert('Bravo');
+        alert('Bravo joue encore');
+        document.location.reload();
     } else {
-        alert('rate');
+        EventTarget.target.className = 'badAns'
+        alert('Rate essaye encore');
     }
 }
 
